@@ -1,11 +1,33 @@
 import { Recipe } from "./recipe.model";
 import { EventEmitter } from "@angular/core";
+import { Ingredient } from "../shared/ingredient.model";
 
 export class RecipeService {
   recipeSelected = new EventEmitter<Recipe>();
 
   private recipes: Recipe[] = [
-    new Recipe('A Test Recipe', 'This is a test recipe', 'https://www.tasteofhome.com/wp-content/uploads/2018/01/Fettuccine-Carbonara_exps175448_SD143205B01_28_2bC_RMS-1-696x696.jpg')
+    new Recipe(
+      'Tasty Schnitzel',
+      'A super tasty schnitzel!',
+      'https://upload.wikimedia.org/wikipedia/commons/7/72/Schnitzel.JPG',
+      [
+        new Ingredient('Pork Cutlets', 1),
+        new Ingredient('French Fries', 20)
+      ]
+    ),
+    new Recipe(
+      'Big Fat Burger',
+      'The king of burgers',
+      'https://upload.wikimedia.org/wikipedia/commons/b/be/Burger_King_Angus_Bacon_%26_Cheese_Steak_Burger.jpg',
+      [
+        new Ingredient('Hamburger Buns', 1),
+        new Ingredient('Hamburger Patties', 1),
+        new Ingredient('Cheese', 1),
+        new Ingredient('Lettuce', 1),
+        new Ingredient('Bacon', 3),
+        new Ingredient('Tomato', 1)
+      ]
+    )
   ];
 
   getRecipes() {
