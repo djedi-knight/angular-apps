@@ -26,4 +26,9 @@ export class ShoppingListService {
     this.ingredients.push(...ingredients); // use spread operator to push array as a list of ingredients
     this.ingredientsChanged.next(this.ingredients.slice());
   }
+
+  updateIngredient(index: number, newIngredient: Ingredient) {
+    this.ingredients[index] = newIngredient;
+    this.ingredientsChanged.next(this.ingredients.slice());
+  }
 }
