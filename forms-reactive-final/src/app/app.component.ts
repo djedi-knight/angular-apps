@@ -12,6 +12,10 @@ export class AppComponent implements OnInit {
   signupForm: FormGroup;
   forbiddenUsernames = ['Chris', 'Anna'];
 
+  get formHobbies() {
+    return <FormArray>this.signupForm.get('hobbies');
+  }
+
   constructor() {}
 
   ngOnInit() {
