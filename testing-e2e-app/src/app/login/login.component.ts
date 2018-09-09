@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  isLoggedIn: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  onSubmit() {
+    this.isLoggedIn = true;
+  }
 }
