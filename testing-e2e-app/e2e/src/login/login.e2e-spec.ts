@@ -16,6 +16,6 @@ describe('Login Page', () => {
     page.sleep(5000);
     page.getSubmitButton().click();
     page.sleep(5000);
-    // expect(page.getLoginInput()).toEqual('Welcome to e2e-test-app!');
+    expect(page.getLoginSuccessText().isPresent()).toBeTruthy();
   });
 });

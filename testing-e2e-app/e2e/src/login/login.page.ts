@@ -20,4 +20,8 @@ export class LoginPage {
   getSubmitButton() {
     return element(by.id('submit'));
   }
+
+  getLoginSuccessText() {
+    return element(by.id('loginSuccess'));
+  }
 }

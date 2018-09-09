@@ -4,7 +4,7 @@
   Password: <input type="text" name="password" id="password">
   <br><br>
   <button type="submit" id="submit" (click)="onSubmit()">Submit</button>
-  <p *ngIf="isLoggedIn">
+  <p id="loginSuccess" *ngIf="isLoggedIn">
     Logged In!
   </p>
 </div>
